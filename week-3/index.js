@@ -11,9 +11,6 @@
 // https://www.tutorialspoint.com/es6/es6_modules.htm
 // https://www.youtube.com/watch?v=Q3SBogjUfMk
 
-import { Team } from "./team.js";
-import { Teams } from "./team-manager.js";
 import { findTeams } from "./team-manager.js";
-import { getGame } from "./team-manager.js";
 
 console.log(findTeams());

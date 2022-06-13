@@ -1,4 +1,15 @@
-//www.delftstack.com/howto/javascript/javascript-find-object-in-array/
+// Title: Assignment 1.2
+// Author: Professor Krasso
+// Date: May 2022
+// Modified By: Ferdinand "Papo" Detres Jr
+// Description: This week's project shows how to debug with node
+// https://developer.chrome.com/docs/devtools/javascript/
+// https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+// https://rollbar.com/blog/javascript-constructors/
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Array
+// https://www.w3schools.com/jsref/prop_checkbox_value.asp
+// https://www.tutorialspoint.com/es6/es6_modules.htm
+// https://www.youtube.com/watch?v=Q3SBogjUfMk//www.delftstack.com/howto/javascript/javascript-find-object-in-array/
 
 import { Team } from "./team.js";
 
@@ -11,6 +22,7 @@ export class Teams extends Team {
   }
 }
 
+//Array of teams
 let newYork = new Teams("New York", "Angels", "56", "1985", "Keith Vanhorn");
 let florida = new Teams("Florida", "Gators", "57", "1983", "Tim Vanhorn");
 let texas = new Teams("Texas", "Tacos", "56", "1885", "Ron Vanhorn");
@@ -19,7 +31,8 @@ let sanAntonio = new Teams("San Antonio", "Tiger", "65", "1785", "Matt Vanhorn")
 
 let teams = [newYork, florida, texas, chicago, sanAntonio];
 
-function findTeams() {
+//loops through array of TEams
+export function findTeams() {
   console.log("-- DISPLAYING TEAMS --");
   teams.forEach((teams) => {
     console.log(
@@ -43,18 +56,4 @@ function findTeams() {
   });
 }
 
-function findTeam(name) {
-  teams.find(function (post) {
-    if (post.name == name) return true;
-  });
-}
-
-function getGame() {
-  let teamOne = findTeam("New York");
-  let teamTwo = findTeam("San Antonio");
-  return teamOne.name;
-}
-
 console.log(findTeams());
-console.log(findTeam());
-console.log(getGame());
