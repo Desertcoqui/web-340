@@ -1,6 +1,6 @@
 // Title: Assignment 1.2
 // Author: Professor Krasso
-// Date: May 2022
+// Date: June 12 2022
 // Modified By: Ferdinand "Papo" Detres Jr
 // Description: This week's project shows how to debug with node
 // https://developer.chrome.com/docs/devtools/javascript/
