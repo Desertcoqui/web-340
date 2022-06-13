@@ -1,44 +1,47 @@
+//www.delftstack.com/howto/javascript/javascript-find-object-in-array/
+
 import { Team } from "./team.js";
 
-class Team extends findTeam() {
+export class Teams extends Team {
+  constructor(name, mascot, playerCount, yearEstablished, mvp) {
+    super(name, mascot, playerCount);
+    //custom behavior
+    this.yearEstablished = yearEstablished;
+    this.mvp = mvp;
+  }
+}
 
-    let newYork = [
-      {
-        name: "New York",
-        mascot: "Giants",
-        playerCount: "23",
-      },
-    ];
+let newYork = new Teams("New York", "Angels", "56", "1985", "Keith Vanhorn");
+let florida = new Teams("Florida", "Gators", "57", "1983", "Tim Vanhorn");
+let texas = new Teams("Texas", "Tacos", "56", "1885", "Ron Vanhorn");
+let chicago = new Teams("Chicago", "Lions", "45", "1945", "Jimmy Vanhorn");
+let sanAntonio = new Teams("San Antonio", "Tiger", "65", "1785", "Matt Vanhorn");
 
-    let florida = [
-      {
-        name: "Florida",
-        mascot: "Gators",
-        playerCount: "28",
-      },
-    ];
+let teams = [newYork, florida, texas, chicago, sanAntonio];
 
-    let maryland = [
-      {
-        name: "Maryland",
-        mascot: "Blades",
-        playerCount: "29",
-      },
-    ];
+function findTeams() {
+  console.log("-- DISPLAYING TEAMS --");
+  teams.forEach((teams) => {
+    console.log(
+      "Name: " +
+        teams.name +
+        "\n" +
+        "Mascot: " +
+        teams.mascot +
+        "\n" +
+        "Player Count: " +
+        teams.playerCount +
+        "\n" +
+        "Year Established: " +
+        teams.yearEstablished +
+        "\n" +
+        "MVP: " +
+        teams.mvp +
+        "\n" +
+        "\n"
+    );
+  });
+}
 
-    let texas = [
-      {
-        name: "Texas",
-        mascot: "Spiders",
-        playerCount: "57",
-      },
-    ];
-
-    let arizona = [
-      {
-        name: "Arizona",
-        mascot: "Cactus",
-        playerCount: "43",
-      },
-    ];
-};
+console.log(findTeams());
+console.log(findTeam());
