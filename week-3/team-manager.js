@@ -43,5 +43,18 @@ function findTeams() {
   });
 }
 
+function findTeam(name) {
+  teams.find(function (post) {
+    if (post.name == name) return true;
+  });
+}
+
+function getGame() {
+  let teamOne = findTeam("New York");
+  let teamTwo = findTeam("San Antonio");
+  return teamOne.name;
+}
+
 console.log(findTeams());
 console.log(findTeam());
+console.log(getGame());
