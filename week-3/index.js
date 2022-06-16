@@ -1,6 +1,6 @@
 // Title: Assignment 1.2
 // Author: Professor Krasso
-// Date: May 2022
+// Date: Jun 2022
 // Modified By: Ferdinand "Papo" Detres Jr
 // Description: This week's project shows how to debug with node
 // https://developer.chrome.com/docs/devtools/javascript/
@@ -12,5 +12,6 @@
 // https://www.youtube.com/watch?v=Q3SBogjUfMk
 
 import { findTeams } from "./team-manager.js";
+import moment from "moment";
 
 console.log(findTeams());

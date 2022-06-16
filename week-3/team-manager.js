@@ -12,6 +12,7 @@
 // https://www.youtube.com/watch?v=Q3SBogjUfMk//www.delftstack.com/howto/javascript/javascript-find-object-in-array/
 
 import { Team } from "./team.js";
+import moment from "moment";
 
 export class Teams extends Team {
   constructor(name, mascot, playerCount, yearEstablished, mvp) {
@@ -29,7 +30,7 @@ let texas = new Teams("Texas", "Tacos", "56", "1885", "Ron Vanhorn");
 let chicago = new Teams("Chicago", "Lions", "45", "1945", "Jimmy Vanhorn");
 let sanAntonio = new Teams("San Antonio", "Tiger", "65", "1785", "Matt Vanhorn");
 
-let teams = [newYork, florida, texas, chicago, sanAntonio];
+var teams = [newYork, florida, texas, chicago, sanAntonio];
 
 //loops through array of TEams
 export function findTeams() {
@@ -56,4 +57,6 @@ export function findTeams() {
   });
 }
 
+
 console.log(findTeams());
+console.log(findTeam());
