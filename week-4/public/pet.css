@@ -1,0 +1,10 @@
+body {
+  font-family: "Amatic SC", Impact, "Arial Narrow Bold", sans-serif;
+  background-size: cover;
+  background-image: url(pexels-helena-lopes-1378849.jpeg);
+  height: 100%;
+  /* overflow: hidden; */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #ccffe6;
+}

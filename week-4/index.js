@@ -1,12 +1,24 @@
-var express = require("express");
-var http = require("http");
-var app = express();
+const express = require("express");
 
-app.use(function (request, response) {
-  console.log("In comes a request to:" + request.url);
-  response.end("We are in business");
+const app = express();
+const port = 3000;
+
+//Static Files Images, JS, CSS Styles
+app.use(express.static("public"));
+app.use("/js", express.static(__dirname + "public/js"));
+app.use("/styles", express.static(__dirname + "public/img"));
+
+//HTML Routes
+app.engine(".html", require("ejs").__express);
+app.set("views", "./views");
+app.set("view engine", "html");
+
+app.get("", (req, res) => {
+  res.render("index");
 });
 
-http.createServer(app).listen(3000);
+//Listening on port 3000
 
-console.log("hello");
+app.listen(port, () => {
+  console.log("Application started and listening on port" + port);
+});
